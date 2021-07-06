@@ -28,5 +28,3 @@ This repo contains two examples where the Ambassador pattern may be applied to.
 ![Sharded Redis](./sharded-redis.png)
 
 As you may see in the above image. All the requests coming from the application are send through localhost to the Ambassador (`twemproxy`).
-
-The `twemproxy` will be responsible to proxy the requests to the sharded redis instances.
