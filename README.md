@@ -12,9 +12,7 @@ The Ambassador is responsible to `discover` the external service address (this p
 
 ---
 
-## Examples
-
-This repo contains two examples where the Ambassador pattern may be applied to.
+## Example
 
 ### Sharded Redis
 
