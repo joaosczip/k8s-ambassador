@@ -21,12 +21,12 @@ This repo contains two examples where the Ambassador pattern may be applied to.
 - We have a `StatefulSet` defining 3 replicas of a `redis` container;
 - Also, there is a `Service` called `redis-svc` to expose the `Pods` to the cluster;
 - We're using [twemproxy](https://github.com/twitter/twemproxy) to act as a proxy to the redis containers;
-- Lastly, we defined a `Pod` called `ambassador-example` that defines two pods:
+- Lastly, we defined a `Pod` called `ambassador-example`. It defines two containers:
   - `nginx`: our client application that needs to communicate with the `redis`
   - `twemproxy`: who will send the request to one of the redis containers.
 
 ![Sharded Redis](./sharded-redis.png)
 
-As you may see in the image above. All the requests coming from the application are send through localhost to the Ambassador (`twemproxy`).
+As you may see in the above image. All the requests coming from the application are send through localhost to the Ambassador (`twemproxy`).
 
 The `twemproxy` will be responsible to proxy the requests to the sharded redis instances.
